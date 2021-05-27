@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <head>
+            <title>
+                Exercicis Sprint 3
+            </title>
+        </head>
+
+        <h1>Exercicis Sprint 3</h1>
+
+        <p id = "demo"> </p>
+
+
+        <script>
+        
+        /*NIVEL 1*******************************************************************************/
+
+        /*Exercic 1*/
+        console.log('Hola Mundo!');
+
+        /*Exercic 2*/
+        alert('Me llamo Kadi');
+
+        /*Exercic 3*/
+        let nombre = "Kadi";
+        let apellido = "Dem";
+
+        console.log(nombre + ' ' + apellido);
+
+        /*Exercic 4*/
+        let num1 = 37;
+        let num2 = 65;
+        let resultado = num1 + num2;
+
+        console.log('La suma entre ' + num1 + ' i ' + num2 + ' es ' + resultado);
+
+
+        /*Exercic 5*/
+        let nota_examen = '7.3';
+
+        if (nota_examen >= 5) {
+            console.log('¡Felicidades! Has aprovado el examne con un ' + nota_examen);
+        } else {
+            console.log('Ooohh, has suspendido el examne con un ' + nota_examen);
+        }
+
+        /*Exercic 6*/
+        let blau = "Tinc un cotxe de color blau";
+        let verd = blau.replace("blau", "verd");
+        console.log(verd);
+
+        let u = blau.replace(/o/g, "u");
+        console.log(u);
+
+
+        /*Exercic 7*/
+        let objectes = ['taula', 'cadira', 'ordinador', 'llibreta'];
+        let text;
+        let i;
+        for (i=0; i< objectes.length; i++){
+            text = "L'objecte " + objectes[i] + " està a la posició " + i ;
+            console.log(text);
+        }
+
+
+        /*Exercic 8*/
+       
+        function calculadora(operador, valor1, valor2) {
+
+            let resultat;
+
+            switch(operador){
+                 case "suma": 
+                 resultat = valor1 + valor2;
+                 break;
+
+                 case "resta": 
+                 resultat = valor1 - valor2; 
+                 break;
+
+                 case "multip": 
+                 resultat = valor1 * valor2;
+                 break;
+
+                 default: 
+                 resultat = "No és possible realitzar aquesta operació";
+            }
+
+            document.getElementById("demo").innerHTML = "El resultat és: " + resultat;
+            console.log("El resultat és: " + resultat);
+        }
+    
+        let calcul= calculadora("multip", 13, 7);
+
+
+        /*NIVEL 2*******************************************************************************/
+        
+            
+        </script>    
+    </body>
+</html>
