@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <head>
+        <title>
+            Exercicis Sprint 3 - Lletres
+        </title>
+    </head>
+
+    <h1>Exercicis Sprint 3: Lletres</h1>
+
+    <p id="demo"> </p>
+
+
+    <script>
+
+        /* Exercici 1 **********************************************/
+
+        function spelling(nombre) {
+
+            let i;
+            for (i = 0; i < nombre.length; i++) {
+                console.log(nombre[i]);
+            }
+        }
+
+        spelling("KADIJATU");
+
+
+        /* Exercici 2 **********************************************/
+
+        function lletres(nombre) { // esta función no sirve para palabras con vocales con acentos o caracteres //
+
+            let vocales = ["A", "E", "I", "O", "U"];
+
+            let i;
+            let letra;
+            for (i = 0; i < nombre.length; i++) {
+
+                letra = nombre[i].toUpperCase();
+                if(vocales.indexOf(letra) != -1){
+                    console.log("He trobat la VOCAL: " + letra);
+                }else{
+                   if (letra >= '0' && letra <= '9'){
+                       console.log("Els noms de persones no contenen el número: " + letra);
+                   }else {
+                       console.log("He trobat la CONSONANTE: " + letra);
+                   }
+
+                }
+            }
+        }
+
+        lletres("Kadija7u");
+
+        /* Exercici 3 **********************************************/
+
+        const lletra = new Map (['nom', 'Kadijatu']);
+
+        /* Exercici 4 **********************************************/
+
+        /* Exercici 5 **********************************************/
+
+
+
+    </script>
+</body>
+
+</html>
