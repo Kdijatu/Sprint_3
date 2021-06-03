@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <head>
+        <title>
+            Exercicis Sprint 3 - Nivell 2
+        </title>
+
+        <link href="style_N2.css" rel="stylesheet">
+    </head>
+
+    <header>
+        <h1>Exercicis Sprint 3: Nivell 2</h1>
+    </header>
+
+    <main>
+
+        <div class="valores">
+        <div class="valor">
+            <p>Introdueix el primer valor</p>
+            <input type="text" id="valor1" placeholder="Primer número" />
+        </div>
+        
+        <div class="valor">
+            <p>Introdueix el segon valor</p>
+        <input type="text" id="valor2" placeholder="Segon número" />
+        </div>
+        </div>
+        
+        <div class="apartat2">
+           <div class="pregunta">
+            <p>Quina operació vols realitzar? </p> 
+           </div>
+        
+        <div class="operacions">
+            <input type='button' class="button" onClick='sumar()' Value='Sumar' />
+            <input type='button' class="button" onClick='restar()' Value='Restar' /> 
+            <input type='button' class="button" onClick='multiplicar()' Value='Multiplicar' /> 
+            <input type='button' class="button" onClick='dividir()' Value='Dividir' />
+        </div>
+
+        <div class="resposta">
+            <p id="resposta"> </p>
+        </div>
+        
+        </div>
+
+        
+
+
+
+        
+
+    </main>
+
+
+
+    <script>
+
+
+        /*NIVEL 2*******************************************************************************
+        
+        Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per 
+        sumar, restar, multiplicar i dividir. Hauràs de controlar el Zero com a denominador d'una divisió, 
+        ja que si l'usuari divideix qualsevol número entre 0 donarà error (p.e. 3/0), has de garantir que no falli! 
+        */
+
+
+
+
+
+        function sumar() {
+
+            let valor1 = parseFloat(document.getElementById("valor1").value);
+            let valor2 = parseFloat(document.getElementById("valor2").value);
+
+            let suma = valor1 + valor2;
+            let operador = "sumar";
+
+            resultat(valor1, valor2, operador, suma);
+
+        }
+
+        function restar() {
+
+            let valor1 = parseFloat(document.getElementById("valor1").value);
+            let valor2 = parseFloat(document.getElementById("valor2").value);
+
+            let resta = valor1 - valor2;
+
+            let operador = "restar";
+
+            resultat(valor1, valor2, operador, resta);
+
+        }
+
+        function multiplicar() {
+            let valor1 = parseFloat(document.getElementById("valor1").value);
+            let valor2 = parseFloat(document.getElementById("valor2").value);
+
+            let multip = valor1 * valor2;
+
+            let operador = "multiplicar";
+
+            resultat(valor1, valor2, operador, multip);
+        }
+
+        function dividir() {
+            let valor1 = parseFloat(document.getElementById("valor1").value);
+            let valor2 = parseFloat(document.getElementById("valor2").value);
+
+
+            if (valor2 == 0) {
+                document.getElementById("resposta").innerHTML = "ERROR. No és possible realitzar aquesta operació";
+            } else {
+                let divisio = valor1 / valor2;
+
+                let operador = "dividir";
+
+                resultat(valor1, valor2, operador, divisio);
+            }
+
+        }
+
+        function resultat(num1, num2, operacio, resultat) {
+            document.getElementById("resposta").innerHTML = "El resultat de " + operacio + " " + num1 + " i " + num2 + " és: " + resultat;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
