@@ -1,0 +1,146 @@
+body {
+    font-family: 'Varta', sans-serif;
+    font-size: 20px;
+    width: 1200px;
+    margin: auto;
+    
+} 
+
+main{
+   
+    background-color: rgb(172, 216, 216);
+    padding: 15px 5px;
+}
+
+header{
+    background-color: rgb(4, 80, 80);
+    padding: 20px;
+    color: white;
+}
+
+h1{
+    font-family: 'Major Mono Display', monospace;
+    text-align: center;
+}
+
+.valores{
+    display: flex;
+    justify-content: center;
+}
+
+.valor{
+    display: flex;
+    flex-direction:column;
+    margin: 25px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border: 2px solid rgb(4, 80, 80);
+    text-align: center;
+}
+
+.apartat2{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.pregunta{
+   display:flex;
+   justify-content: center;
+}
+
+.operacions{
+    display: flex;
+    justify-content: center;
+}
+.button{
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 32, 32);
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    border: 2px orange solid;
+    border-radius: 2px;
+    font-family: 'Varta', sans-serif;
+    font-size: 16px;
+    width: 200px;
+}
+
+.button:hover{
+    background-color: orange;
+    color:white;
+}
+
+.resposta{
+    text-align: center;
+}
+
+/*For phones****************************************/
+@media only screen and (max-width: 480px) {
+    
+    body{
+        width: 100%;
+    }
+
+    .valor{
+        margin:5px;
+    }
+
+   .valores{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+
+   .operacions{
+       display: flex;
+       flex-grow: 1;
+       flex-direction: column;
+       padding: 10px 5px;
+   }
+
+   .button{
+       width: 60%;
+       margin: 10px auto;   
+    }
+}
+
+/*For tablets********************************************/
+@media only screen and (max-width: 786px) {
+    
+    body{
+        width: 100%;
+    }
+
+    .valor{
+        margin:5px;
+    }
+
+   .valores{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+
+   .operacions{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       padding: 10px 5px;
+   }
+
+   .button{
+       width: 50%;
+       margin:10px auto;   
+    }
+    
+}

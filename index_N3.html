@@ -5,56 +5,52 @@
 
     <head>
         <title>
-            Exercicis Sprint 3 - Nivell 2
+            Exercicis Sprint 3 - Nivell 3
         </title>
 
-        <link href="style_N2.css" rel="stylesheet">
+        <link href="style_N3.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Varta:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     </head>
 
     <header>
-        <h1>Exercicis Sprint 3: Nivell 2</h1>
+        <h1>Sprint 3 Nivell 3: Calculadora</h1>
     </header>
 
     <main>
 
         <div class="valores">
-        <div class="valor">
-            <p>Introdueix el primer valor</p>
-            <input type="text" id="valor1" placeholder="Primer número" />
+            <div class="valor">
+                <p>Introdueix el primer valor</p>
+                <input type="text" id="valor1" placeholder="Primer número" />
+            </div>
+
+            <div class="valor">
+                <p>Introdueix el segon valor</p>
+                <input type="text" id="valor2" placeholder="Segon número" />
+            </div>
         </div>
-        
-        <div class="valor">
-            <p>Introdueix el segon valor</p>
-        <input type="text" id="valor2" placeholder="Segon número" />
-        </div>
-        </div>
-        
+
         <div class="apartat2">
-           <div class="pregunta">
-            <p>Quina operació vols realitzar? </p> 
-           </div>
-        
-        <div class="operacions">
-            <input type='button' class="button" onClick='sumar()' Value='Sumar' />
-            <input type='button' class="button" onClick='restar()' Value='Restar' /> 
-            <input type='button' class="button" onClick='multiplicar()' Value='Multiplicar' /> 
-            <input type='button' class="button" onClick='dividir()' Value='Dividir' />
+            <div class="pregunta">
+                <p>Quina operació vols realitzar? </p>
+            </div>
+
+            <div class="operacions">
+                <input type='button' class="button" onClick='sumar()' Value='Sumar' />
+                <input type='button' class="button" onClick='restar()' Value='Restar' />
+                <input type='button' class="button" onClick='multiplicar()' Value='Multiplicar' />
+                <input type='button' class="button" onClick='dividir()' Value='Dividir' />
+            </div>
+
+            <div class="resposta">
+                <p id="resposta"> </p>
+            </div>
+
         </div>
-
-        <div class="resposta">
-            <p id="resposta"> </p>
-        </div>
-        
-        </div>
-
-        
-
-
-
-        
-
     </main>
-
 
 
     <script>
@@ -66,8 +62,6 @@
         sumar, restar, multiplicar i dividir. Hauràs de controlar el Zero com a denominador d'una divisió, 
         ja que si l'usuari divideix qualsevol número entre 0 donarà error (p.e. 3/0), has de garantir que no falli! 
         */
-
-
 
 
 
@@ -128,8 +122,6 @@
             document.getElementById("resposta").innerHTML = "El resultat de " + operacio + " " + num1 + " i " + num2 + " és: " + resultat;
 
         }
-
-
 
 
     </script>
