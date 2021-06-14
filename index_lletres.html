@@ -58,22 +58,22 @@
         /* Exercici 3 **********************************************/
 
         function recompte_lletres(paraula) {
-            const letters = new Map([['A', 0], ['B', 0], ['C', 0], ['D', 0], ['E', 0], ['F', 0], ['G', 0], ['H', 0], ['I', 0], ['J', 0], ['K', 0],['L', 0], ['M', 0],['N', 0], ['Ñ', 0] ['O', 0], ['P', 0], ['Q', 0],['R', 0], ['S', 0], ['T', 0], ['U', 0],['V', 0], ['W', 0], ['X', 0], ['Y', 0], ['Z', 0]]);
-
+            const letters = new Map();
             let i;
             let letter;
+            let count = letters[letter];
 
             for (i = 0; i < paraula.length; i++) {
                 letter = paraula[i].toUpperCase();
-                let count = letters.get(letter) + 1;
-                letters.set(letter,count);    
+
+                letters.set(letter, letters.get(letter) ? letters.get(letter)+1:1);
+               
             }
 
             console.log(letters);
         }
 
-
-        
+       
 
         recompte_lletres("Kadijatu");
         recompte_lletres("Alejandro");
